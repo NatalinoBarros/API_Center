@@ -6,7 +6,7 @@ O projeto separa a camada HTTP (roteamento, validações e respostas) em main.py
   1° Consulta de disponibilidade de domínio no Registro.br;<br>
   2° Consulta de endereço por CEP com fallback entre múltiplas fontes (ViaCEP, BrasilAPI e CepAberto), retornando um JSON normalizado com campos como cep, logradouro, bairro, cidade, uf, ddd e ibge<br>
 
-# Disponibilizado
+## Disponibilizado
 Criador: Natalino<br>
 Data: 06/01/2026<br>
 Atualizado em: 06/01/2026<br>
