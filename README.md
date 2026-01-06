@@ -4,6 +4,7 @@ O projeto separa a camada HTTP (roteamento, validações e respostas) em main.py
 
 Atualmente, a central oferece: (1) consulta de disponibilidade de domínio no Registro.br e (2) consulta de endereço por CEP com fallback entre múltiplas fontes (ViaCEP, BrasilAPI e CepAberto), retornando um JSON normalizado com campos como cep, logradouro, bairro, cidade, uf, ddd e ibge
 
-# Criador: Natalino
-# Data: 06/01/2026
-# Atualizado em: 06/01/2026
+# Disponibilizado
+Criador: Natalino
+Data: 06/01/2026
+Atualizado em: 06/01/2026
