@@ -11,6 +11,6 @@ A arquitetura foi organizada em três módulos: main.py (camada HTTP/rotas, vali
 
 
 ## Disponibilizado
-Criador: Natalino<br>
+Criador: Natalino Barros<br>
 Data: 06/01/2026<br>
 Atualizado em: 06/01/2026<br>
