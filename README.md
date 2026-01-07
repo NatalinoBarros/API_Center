@@ -10,7 +10,7 @@ O projeto também inclui configuração centralizada de logging em logging_confi
   2° Consulta de endereço por CEP com fallback entre múltiplas fontes (ViaCEP, BrasilAPI e CepAberto), retornando um JSON normalizado com campos como cep, logradouro, bairro, cidade, uf, ddd e ibge.<br><br>
   3° Consulta de dados de CNPJ via OpenCNPJ, com formatação/validação do CNPJ antes da chamada externa. <br><br>
 
-##
+## Observabilidade (logging)
 Logs com contexto de requisição (método, path, IP) e registro de tempo de processamento e status code por request (via before_request/after_request).<br><br>​
 Logs de integração nas consultas externas (ex.: sucesso da consulta e origem/URL).<br><br>
 ​
