@@ -1,6 +1,9 @@
 import re
 import requests
 import fun as fnc
+import logging
+
+logger = logging.getLogger(__name__)
 
 def get_registrobr_avail(domain: str, timeout: int = 10): # Api que busca dados do dominio no registroBR
     _ALLOWED_RE = re.compile(r"^[A-Za-z0-9àáâãéêíóôõúüç.-]+$")
@@ -15,6 +18,8 @@ def get_registrobr_avail(domain: str, timeout: int = 10): # Api que busca dados 
     domain_idna = domain.encode("idna").decode("ascii")
 
     url = f"https://registro.br/v2/ajax/avail/raw/{domain_idna}"
+
+    logger.info("Domain lookup Ok source=%s", url)
     resp = requests.get(url, timeout=timeout)
     resp.raise_for_status()
     return resp.text
@@ -53,6 +58,10 @@ def get_cep_logradouro(cep: str, timeout: int = 10): # API que busca endereço c
 
             resp.raise_for_status()
             response = resp.json()
+
+            # log
+            logger.info("Cep lookup ok source=%s", url[0] if isinstance(url, list) else url)
+
             return(fnc.normalizar_cep(response))
         except requests.exceptions.RequestException as e:
             last_error = str(e)   # Timeout, conexão, HTTPError etc. [web:319]
@@ -76,6 +85,7 @@ def get_cnpj(cnpj: str, timeout: int = 10): # Api que busca dados QSA da receita
         return "CNPJ invalido"
         
     url = f'https://api.opencnpj.org/{fnc.formata_cnpj(cnpj)}'
+    logger.info("CNPJ lookup Ok source=%s", url)
     resp = requests.get(url, timeout=timeout)
     resp.raise_for_status()
     return resp.json()
