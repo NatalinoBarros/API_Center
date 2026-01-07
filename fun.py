@@ -1,11 +1,10 @@
 import numbers
 import re
 from flask import jsonify
+import logging
 
-def response_default(code: int, msn):
+def response_default(code: int, msn) -> dict:
    # if code is None:
-        
-
     data = {
                 "code":code,
                 "mensage": msn
