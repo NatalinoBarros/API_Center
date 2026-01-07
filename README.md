@@ -18,4 +18,4 @@ Logs de integração nas consultas externas (ex.: sucesso da consulta e origem/U
 ## Disponibilizado
 Criador: Natalino Barros<br>
 Data: 06/01/2026<br>
-Atualizado em: 06/01/2026<br>
+Atualizado em: 07/01/2026<br>
